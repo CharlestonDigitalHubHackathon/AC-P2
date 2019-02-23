@@ -31,6 +31,21 @@ var urlParams;
 
 if (document.querySelector('body.chs .newDate')) {
     document.querySelector('body.chs .newDate').innerHTML += urlParams['date'];
+
 }
 
+var tempImg = document.querySelectorAll('.temp');
+tempImg.forEach(input => input.addEventListener('mouseover', function() {
+    if (this.classList.contains('1')) {
+        document.querySelector('.temp-img img').src='/static/img/cool.png';
+    } else if (this.classList.contains('2')) {
+        document.querySelector('.temp-img img').src='/static/img/Little Hot.png';
+    } else if (this.classList.contains('3')) {
+        document.querySelector('.temp-img img').src='/static/img/Hot temp.png';
+    } else if (this.classList.contains('4')) {
+        document.querySelector('.temp-img img').src='/static/img/dripping.jpeg';
+    } else if (this.classList.contains('5')) {
+        document.querySelector('.temp-img img').src='/static/img/Hot Sweaty Person_image.gif';
+    }
+}));
 
