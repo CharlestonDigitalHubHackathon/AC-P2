@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Climate Action - P2</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/style.css" />
+    <link rel="stylesheet" type="text/css"href="../static/styles/picker-dark.css" >
+
+</head>
+<body>
+    <div class='main'>
+        <img src="static/img/sdg-goal-13-climate-action_icon.png">
+        <h1>Heat Wave Impacts</h1>
+        <h2>What is the World's Deadliest Natural Phenomenon?</h2>
+        <quote>Heat Waves are among the world's deadliest natural disasters, killing more people than hurricanes, tornadoes, and earthquakes</quote>
+        <img class="img2" src='/static/img/heatwave1.png'>
+        <h2>What's the impact for you?</h2>
+        <h2>Choose Your Location and a Future Date:</h2>
+        <select id="location">
+            <option value="nolocation">Choose a Location</option>
+            <option value="chs.html">Charleston, SC</option>
+            <option value="australia.html">Adeliade, Australia</option>
+            <option value="china.html">Bejing, China</option>
+            <option value="uae.html">Dubai, UAE</option>
+        </select>
+        <div class="chooseDate">
+            <input type="text" id="input-inline" placeholder="Pick a Date"/><br><br>
+            <div id="pick-inline"></div>
+        </div>
+        <div class="subButton">
+            <input class="button" type="submit" value="View Data" onclick="getInput()">
+        </div>
+
+    </div>
+    <script>
+            window.addEventListener("load", function(){
+              // container + target input
+              picker.attach("pick-inline", "input-inline");
+            });
+    </script>
+
+    <script src="../static/custom.js"></script>
+    <script src="../static/datepicker.js"></script>
+
+</body>
+</html>
